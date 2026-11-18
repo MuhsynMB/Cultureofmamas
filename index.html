@@ -48,9 +48,10 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1
 nav{display:flex;gap:1.4rem;font-weight:500;font-size:.9rem}
 nav a{text-decoration:none}
 nav a:hover{color:var(--link)}
-.btn{display:inline-block;padding:.85rem 1.6rem;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--terra);background:var(--terra);color:#fff}
+.btn{display:inline-block;padding:.95rem 1.8rem;border-radius:3px;font-weight:600;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;line-height:1.4;transition:background-color .2s,color .2s,border-color .2s;text-decoration:none;border:2px solid var(--terra);background:var(--terra);color:#fff}
 .btn:hover{filter:brightness(1.08)}
 .btn.ghost{background:transparent;color:var(--text);border-color:var(--text)}
+.btn.ghost:hover{background:var(--text);color:var(--bg);filter:none}
 @media(max-width:720px){nav{display:none}}
 
 /* hero */
@@ -111,6 +112,7 @@ ol.steps span{color:var(--muted);font-size:.95rem}
 .book p{margin-inline:auto;color:#ecd9c6}
 .book .cta{justify-content:center}
 .book .btn.ghost{color:var(--cream);border-color:var(--cream)}
+.book .btn.ghost:hover{background:var(--cream);color:var(--brown)}
 .book .btn:not(.ghost){background:var(--gold);border-color:var(--gold);color:var(--brown)}
 
 footer{background:var(--bg)}
@@ -118,7 +120,7 @@ footer .wrap{padding:2.2rem 0;text-align:center}
 .motto{font-weight:600;letter-spacing:.14em;font-size:.9rem}
 .tags{color:var(--muted);font-size:.85rem;margin-top:.6rem}
 .view{display:none}.view.on{display:block}
-.burger{width:46px;height:46px;border:2px solid var(--text);border-radius:50%;background:transparent;display:grid;place-content:center;gap:5px;cursor:pointer;padding:0}
+.burger{width:46px;height:46px;border:2px solid var(--text);border-radius:3px;background:transparent;display:grid;place-content:center;gap:5px;cursor:pointer;padding:0}
 .burger span{display:block;width:20px;height:2.5px;background:var(--text);border-radius:2px;transition:transform .2s,opacity .2s}
 .burger[aria-expanded=true] span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
 .burger[aria-expanded=true] span:nth-child(2){opacity:0}
@@ -128,7 +130,7 @@ footer .wrap{padding:2.2rem 0;text-align:center}
 #menu a{font:600 1.5rem "Playfair Display",Georgia,serif;text-decoration:none;padding:.7rem 0;border-bottom:1px dashed var(--line)}
 #menu a:last-child{border-bottom:0}
 #menu a.cur{color:var(--link)}
-button.btn{font:inherit;font-weight:600;cursor:pointer}
+button.btn{font:inherit;font-weight:600;font-size:.82rem;cursor:pointer}
 .phead{padding:3.5rem 0 1.5rem}
 .phead p{color:var(--muted);font-size:1.1rem}
 .phead h1{margin-bottom:1rem}
@@ -150,7 +152,7 @@ button.btn{font:inherit;font-weight:600;cursor:pointer}
 .mail .in{padding:1.8rem 1.6rem 1.6rem;position:relative}
 .mail h2{font-size:clamp(1.6rem,4vw,2.1rem);margin:0 2.5rem .4rem 0}
 .mail .lead{color:var(--muted);font-size:.95rem}
-.mail .x{position:absolute;top:1rem;right:1rem;width:42px;height:42px;border-radius:50%;border:2px solid var(--text);background:transparent;color:var(--text);font-size:1.4rem;line-height:1;cursor:pointer}
+.mail .x{position:absolute;top:1rem;right:1rem;width:42px;height:42px;border-radius:3px;border:2px solid var(--text);background:transparent;color:var(--text);font-size:1.4rem;line-height:1;cursor:pointer}
 .mail form{display:grid;gap:1rem;margin-top:1rem}
 .mail fieldset{border:0;padding:0;margin:0;display:grid;gap:1rem;min-width:0}
 .mail fieldset[disabled]{display:none}
