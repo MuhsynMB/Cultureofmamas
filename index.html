@@ -276,7 +276,7 @@ button.btn{font:inherit;font-weight:600;font-size:.82rem;cursor:pointer}
     <h2>Book your day in Zanzibar</h2>
     <p>Send us a message with your dates, group size and any dietary needs, and we will confirm your cooking experience.</p>
     <div class="cta">
-      <a class="btn" href="https://wa.me/255773958346" target="_blank" rel="noopener">Message us on WhatsApp</a>
+      <a class="btn" href="https://wa.me/255773958346?text=Hi%20Culture%20of%20Mamas%21%20I%27d%20like%20to%20book%20a%20cooking%20experience.%0A%0AExperience%3A%20%0ADate%3A%20%0ANumber%20of%20guests%3A%20%0ADietary%20needs%3A%20" target="_blank" rel="noopener" data-wa="booking">Message us on WhatsApp</a>
       <button class="btn ghost" type="button" data-email="booking">Send an email</button>
     </div>
   </div>
@@ -318,7 +318,7 @@ button.btn{font:inherit;font-weight:600;font-size:.82rem;cursor:pointer}
 <section id="contact-exp" class="book"><div class="wrap">
   <h2>Ready to book?</h2>
   <p>Send us your dates, group size and any dietary needs, and we will confirm your experience.</p>
-  <div class="cta"><a class="btn" href="https://wa.me/255773958346" target="_blank" rel="noopener">Message us on WhatsApp</a><button class="btn ghost" type="button" data-email="booking">Send an email</button></div>
+  <div class="cta"><a class="btn" href="https://wa.me/255773958346?text=Hi%20Culture%20of%20Mamas%21%20I%27d%20like%20to%20book%20a%20cooking%20experience.%0A%0AExperience%3A%20%0ADate%3A%20%0ANumber%20of%20guests%3A%20%0ADietary%20needs%3A%20" target="_blank" rel="noopener" data-wa="booking">Message us on WhatsApp</a><button class="btn ghost" type="button" data-email="booking">Send an email</button></div>
 </div></section>
 </div>
 
@@ -337,7 +337,7 @@ button.btn{font:inherit;font-weight:600;font-size:.82rem;cursor:pointer}
 <section id="contact-gift" class="book"><div class="wrap">
   <h2>Order your spices</h2>
   <p>Tell us which packages you would like and we will arrange payment and pickup or delivery.</p>
-  <div class="cta"><a class="btn" href="https://wa.me/255773958346" target="_blank" rel="noopener">Message us on WhatsApp</a><button class="btn ghost" type="button" data-email="gift">Send an email</button></div>
+  <div class="cta"><a class="btn" href="https://wa.me/255773958346?text=Hi%20Culture%20of%20Mamas%21%20I%27d%20like%20to%20order%20spices.%0A%0APackages%3A%20%0APickup%20or%20delivery%3A%20" target="_blank" rel="noopener" data-wa="gift">Message us on WhatsApp</a><button class="btn ghost" type="button" data-email="gift">Send an email</button></div>
 </div></section>
 </div>
 </main>
@@ -493,6 +493,13 @@ button.btn{font:inherit;font-weight:600;font-size:.82rem;cursor:pointer}
   form.addEventListener('change',function(e){if(e.target.name==='products'){var err=form.querySelector('[data-fs-error="products"]');err.textContent='';err.removeAttribute('data-fs-active');}});
   type.addEventListener('change',sync);exp.addEventListener('change',sync);
   document.addEventListener('click',function(e){
+    var w=e.target.closest('[data-wa]');
+    if(w){ /* pre-fill the WhatsApp message, including the option the visitor picked */
+      var gift=w.getAttribute('data-wa')==='gift',p=pick&&pick.kind===(gift?'gift':'booking')?pick.name:'';
+      var msg=gift?"Hi Culture of Mamas! I'd like to order spices.\n\nPackages: "+p+"\nPickup or delivery: "
+                  :"Hi Culture of Mamas! I'd like to book a cooking experience.\n\nExperience: "+p+"\nDate: \nNumber of guests: \nDietary needs: ";
+      w.href='https://wa.me/255773958346?text='+encodeURIComponent(msg);return;
+    }
     var b=e.target.closest('[data-email]');
     if(b){open(b.getAttribute('data-email'));return;}
     var a=e.target.closest('.opt [data-scroll]');
