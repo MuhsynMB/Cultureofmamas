@@ -119,6 +119,7 @@ footer{background:var(--bg)}
 footer .wrap{padding:2.2rem 0;text-align:center}
 .motto{font-weight:600;letter-spacing:.14em;font-size:.9rem}
 .tags{color:var(--muted);font-size:.85rem;margin-top:.6rem}
+.credit{color:var(--muted);font-size:.78rem;letter-spacing:.04em;margin:1.4rem auto 0;padding-top:1.2rem;border-top:1px solid var(--line);max-width:none}
 .view{display:none}.view.on{display:block}
 .burger{width:46px;height:46px;border:2px solid var(--text);border-radius:3px;background:transparent;display:grid;place-content:center;gap:5px;cursor:pointer;padding:0}
 .burger span{display:block;width:20px;height:2.5px;background:var(--text);border-radius:2px;transition:transform .2s,opacity .2s}
@@ -346,6 +347,7 @@ button.btn{font:inherit;font-weight:600;font-size:.82rem;cursor:pointer}
   <div class="wrap">
     <div class="motto">COOK &bull; CONNECT &bull; EXPERIENCE ZANZIBAR</div>
     <div class="tags">#CultureOfMamas #ZanzibarFood #SwahiliCuisine #ZanzibarExperience #CookWithMamas</div>
+    <p class="credit">&copy; <span id="yr">2026</span> Culture of Mamas. All rights reserved. Designed by Muhsyn MB.</p>
   </div>
 </footer>
 <script>
@@ -369,6 +371,7 @@ button.btn{font:inherit;font-weight:600;font-size:.82rem;cursor:pointer}
     else if(!menu.hidden&&!e.target.closest('header')){setMenu(false);}
   });
   document.addEventListener('keydown',function(e){if(e.key==='Escape'){setMenu(false);}});
+  document.getElementById('yr').textContent=new Date().getFullYear();
   window.addEventListener('hashchange',route);
   route();
 })();
