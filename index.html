@@ -146,6 +146,16 @@ button.btn{font:inherit;font-weight:600;font-size:.82rem;cursor:pointer}
 .opt .body{padding:1.2rem 1.3rem 1.6rem}
 .opt .body p{color:var(--muted);font-size:.95rem;margin:.5rem 0 0}
 .opt .price{font-weight:600;color:var(--link);margin:.8rem 0 1rem}
+.pk-lead{color:var(--muted);margin-bottom:.5rem}
+.pk-group{font-size:1.5rem;margin:2.6rem 0 1.1rem;padding-bottom:.6rem;border-bottom:2px solid var(--gold)}
+.opt.pkg{display:flex;flex-direction:column}
+.pkg .body{flex:1;display:flex;flex-direction:column;padding:1.5rem 1.4rem 1.6rem}
+.pkg .tag{align-self:flex-start;background:var(--gold);color:var(--brown);font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:.25rem .6rem;border-radius:3px;margin-bottom:.7rem}
+.pkg .pp{font:800 1.9rem "Playfair Display",serif;color:var(--link);margin:.5rem 0 .2rem}
+.pkg .pp small{font:500 .85rem "Montserrat",sans-serif;color:var(--muted)}
+.pkg .meta{list-style:none;padding:0;margin:.9rem 0 1.3rem;font-size:.85rem;color:var(--muted)}
+.pkg .meta li{padding:.35rem 0;border-top:1px dashed var(--line)}
+.pkg .btn{margin-top:auto;align-self:flex-start}
 @media(max-width:900px){.opts.three{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:620px){.opts,.opts.three{grid-template-columns:1fr}}
 /* email form dialog */
@@ -307,12 +317,38 @@ button.btn{font:inherit;font-weight:600;font-size:.82rem;cursor:pointer}
 </div>
 
 <div id="view-experiences" class="view">
-<section class="phead"><div class="wrap"><h1>Book an experience</h1><p>Choose the option that fits how you are travelling. Each one is about four hours and vegetarian friendly.</p></div></section>
+<section class="phead"><div class="wrap"><h1>Book an experience</h1><p>Pick a package below, or tell us how you are travelling and we will plan the day with you. Everything is cooked fresh and vegetarian friendly.</p></div></section>
+<section id="packages"><div class="wrap">
+  <h2>Packages and prices</h2>
+  <p class="pk-lead">Prices are in US dollars. Need a ride? Return transfers from Stone Town can be added to any package from $25.</p>
+  <h3 class="pk-group">Day experiences</h3>
+  <div class="opts three">
+    <div class="opt pkg"><div class="body"><span class="tag">Most popular</span><h3>Mama’s Kitchen</h3><div class="pp">$85 <small>per adult</small></div><p>Our signature day. You are welcomed with song, learn the dishes and spices, cook side by side with the mamas in a kijungu clay pot and sit down to share the meal, finished with spiced coffee.</p><ul class="meta"><li>About 4 hours</li><li>Children 4–11: $25 · under 4 free</li><li>Vegetarian friendly</li></ul><button class="btn" type="button" data-scroll="contact-exp">Book this package</button></div></div>
+    <div class="opt pkg"><div class="body"><h3>Stone Town &amp; the Mamas</h3><div class="pp">$159 <small>per person</small></div><p>Morning walk through the lanes and history of Stone Town with a local guide, then the drive north to Bububu to cook and eat with the mamas.</p><ul class="meta"><li>About 7 hours</li><li>Return transfers included</li></ul><button class="btn" type="button" data-scroll="contact-exp">Book this package</button></div></div>
+    <div class="opt pkg"><div class="body"><h3>Karibu Lunch</h3><div class="pp">$79 <small>per person</small></div><p>No cooking, just a warm welcome. Dress in Zanzibari kanga and kofia and enjoy a home-cooked Swahili lunch with fresh juice and local snacks.</p><ul class="meta"><li>About 3 hours</li><li>Return transfer from Stone Town included</li></ul><button class="btn" type="button" data-scroll="contact-exp">Book this package</button></div></div>
+    <div class="opt pkg"><div class="body"><h3>Mama’s Table Lunch</h3><div class="pp">$45 <small>per adult</small></div><p>A relaxed home-style Swahili lunch of six dishes, cooked by the mamas and served family style.</p><ul class="meta"><li>1 PM – 3 PM</li><li>Children 4–11: $15 · under 4 free</li></ul><button class="btn" type="button" data-scroll="contact-exp">Book this package</button></div></div>
+    <div class="opt pkg"><div class="body"><h3>Coconut Oil Workshop</h3><div class="pp">$45 <small>per person</small></div><p>Crack, grate and press fresh coconuts the traditional way and make your own coconut oil to take home.</p><ul class="meta"><li>About 3 hours</li><li>Take-home bottle of your oil</li></ul><button class="btn" type="button" data-scroll="contact-exp">Book this package</button></div></div>
+    <div class="opt pkg"><div class="body"><h3>Pemba Spice Day</h3><div class="pp">$399 <small>per person</small></div><p>A full-day trip to Pemba, Zanzibar’s spice island, to visit spice farms and cook a local meal with the mamas there.</p><ul class="meta"><li>Full day</li><li>Details and dates on request</li></ul><button class="btn" type="button" data-scroll="contact-exp">Book this package</button></div></div>
+  </div>
+  <h3 class="pk-group">Ramadan specials</h3>
+  <div class="opts three">
+    <div class="opt pkg"><div class="body"><span class="tag">Seasonal</span><h3>Iftar with the Mamas</h3><div class="pp">$45 <small>per person</small></div><p>Break the fast at sunset with a shared table of traditional Swahili Ramadan dishes.</p><ul class="meta"><li>During Ramadan only</li><li>Evening, from sunset</li></ul><button class="btn" type="button" data-scroll="contact-exp">Book this package</button></div></div>
+    <div class="opt pkg"><div class="body"><span class="tag">Seasonal</span><h3>Private Family Iftar</h3><div class="pp">$149 <small>per person</small></div><p>A private Ramadan evening in a Zanzibari home: help prepare the iftar, then break the fast together with the family.</p><ul class="meta"><li>During Ramadan only</li><li>About 5 hours · minimum 2 guests</li></ul><button class="btn" type="button" data-scroll="contact-exp">Book this package</button></div></div>
+  </div>
+  <h3 class="pk-group">Groups and multi-day</h3>
+  <div class="opts three">
+    <div class="opt pkg"><div class="body"><h3>Familia Gathering</h3><div class="pp">Price on request</div><p>A private day for families and friends, planned around your group.</p><ul class="meta"><li>6–10 guests</li></ul><button class="btn" type="button" data-scroll="contact-exp">Book this package</button></div></div>
+    <div class="opt pkg"><div class="body"><h3>Three Days with the Mamas</h3><div class="pp">$1,250 <small>per person</small></div><p>Home cooking class, Swahili spice blending, pilau and seafood classes, and a Swahili boat trip on the Indian Ocean.</p><ul class="meta"><li>3 days · groups of 10+</li><li>Transfers included</li></ul><button class="btn" type="button" data-scroll="contact-exp">Book this package</button></div></div>
+    <div class="opt pkg"><div class="body"><h3>Big Table Celebration</h3><div class="pp">Price on request</div><p>Weddings, reunions, retreats and tour groups. A celebration feast for big groups.</p><ul class="meta"><li>20+ guests</li></ul><button class="btn" type="button" data-scroll="contact-exp">Book this package</button></div></div>
+  </div>
+</div></section>
 <section class="surface"><div class="wrap">
+  <h2>How are you travelling?</h2>
+  <p class="pk-lead">Every package works for solo travellers, couples, families and groups. Tell us who is coming and we will tailor the day.</p>
   <div class="opts">
-    <div class="opt"><img class="photo" style="object-position:50% 15%" src="images/solo.jpg" width="1000" height="1778" loading="lazy" alt="A smiling guest in a colourful head wrap holding up half a coconut, with a bowl of coconut in front of her"><div class="body"><h3>Solo traveller</h3><p>Travelling alone? Cook with the mamas and share the meal as part of the household.</p><div class="price">Price on request</div><button class="btn" type="button" data-scroll="contact-exp">Ask about this option</button></div></div>
-    <div class="opt"><img class="photo" src="images/couples.jpg" width="1000" height="1501" loading="lazy" alt="A smiling couple in traditional Zanzibari dress hugging in front of colourful kanga fabrics"><div class="body"><h3>Couples</h3><p>A relaxed day for two: cook, eat and hear the stories behind each dish.</p><div class="price">Price on request</div><button class="btn" type="button" data-scroll="contact-exp">Ask about this option</button></div></div>
-    <div class="opt"><div class="ph"><div><b>Photo placeholder</b>Family or friends cooking together</div></div><div class="body"><h3>Families and friends</h3><p>Cook together as a group and let everyone get their hands in the dough.</p><div class="price">Price on request</div><button class="btn" type="button" data-scroll="contact-exp">Ask about this option</button></div></div>
+    <div class="opt"><img class="photo" style="object-position:50% 15%" src="images/solo.jpg" width="1000" height="1778" loading="lazy" alt="A smiling guest in a colourful head wrap holding up half a coconut, with a bowl of coconut in front of her"><div class="body"><h3>Solo traveller</h3><p>Travelling alone? Cook with the mamas and share the meal as part of the household.</p><div class="price">From $85 per person</div><button class="btn" type="button" data-scroll="contact-exp">Ask about this option</button></div></div>
+    <div class="opt"><img class="photo" src="images/couples.jpg" width="1000" height="1501" loading="lazy" alt="A smiling couple in traditional Zanzibari dress hugging in front of colourful kanga fabrics"><div class="body"><h3>Couples</h3><p>A relaxed day for two: cook, eat and hear the stories behind each dish.</p><div class="price">From $85 per person</div><button class="btn" type="button" data-scroll="contact-exp">Ask about this option</button></div></div>
+    <div class="opt"><div class="ph"><div><b>Photo placeholder</b>Family or friends cooking together</div></div><div class="body"><h3>Families and friends</h3><p>Cook together as a group and let everyone get their hands in the dough.</p><div class="price">From $85 per person</div><button class="btn" type="button" data-scroll="contact-exp">Ask about this option</button></div></div>
     <div class="opt"><div class="ph"><div><b>Photo placeholder</b>A private group celebration</div></div><div class="body"><h3>Private groups and occasions</h3><p>Birthdays, team days or tour groups. Tell us what you need and we will plan it with you.</p><div class="price">Price on request</div><button class="btn" type="button" data-scroll="contact-exp">Ask about this option</button></div></div>
   </div>
 </div></section>
@@ -411,10 +447,25 @@ button.btn{font:inherit;font-weight:600;font-size:.82rem;cursor:pointer}
         <fieldset id="fs-booking">
           <label>Experience
             <select name="experience" id="mail-exp">
-              <option>Solo traveller</option>
-              <option>Couples</option>
-              <option>Families and friends</option>
-              <option>Private groups and occasions</option>
+              <optgroup label="Packages">
+                <option>Mama’s Kitchen</option>
+                <option>Stone Town &amp; the Mamas</option>
+                <option>Karibu Lunch</option>
+                <option>Mama’s Table Lunch</option>
+                <option>Coconut Oil Workshop</option>
+                <option>Pemba Spice Day</option>
+                <option>Iftar with the Mamas</option>
+                <option>Private Family Iftar</option>
+                <option>Familia Gathering</option>
+                <option>Three Days with the Mamas</option>
+                <option>Big Table Celebration</option>
+              </optgroup>
+              <optgroup label="Travelling as">
+                <option>Solo traveller</option>
+                <option>Couples</option>
+                <option>Families and friends</option>
+                <option>Private groups and occasions</option>
+              </optgroup>
               <option value="Not sure yet">Not sure yet</option>
             </select>
           </label>
