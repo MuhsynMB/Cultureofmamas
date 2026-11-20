@@ -105,6 +105,9 @@ ol.steps span{color:var(--muted);font-size:.95rem}
 .dir p{font-size:.95rem;color:var(--muted)}
 .code{display:inline-block;background:var(--brown);color:var(--gold);padding:.25rem .8rem;border-radius:6px;font-weight:600;letter-spacing:.04em}
 .surface .dir{background:var(--bg)}
+.map{position:relative;aspect-ratio:4/3;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:var(--surface);margin:0 0 1.2rem}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.dir .btn{margin-top:.4rem}
 
 /* book */
 .book{text-align:center;background:var(--brown);color:var(--cream)}
@@ -276,8 +279,10 @@ button.btn{font:inherit;font-weight:600;font-size:.82rem;cursor:pointer}
     <div class="dir">
       <h3>How to get here</h3>
       <p><span class="code">V6X8+8H</span></p>
+      <div class="map"><iframe title="Map showing Culture of Mamas in Meli Nane, Bububu" src="https://maps.google.com/maps?q=-6.1016875,39.2164375&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
       <p>Paste the plus code into Google Maps. Turn into the road to Ngalawa Hotel at Meli Nane and follow the dirt road past the bump. Take the first right and go down the small slope. The house with the red gate is in front of you.</p>
       <p>Call when you arrive and someone will come to meet you.</p>
+      <a class="btn" href="https://maps.app.goo.gl/9yCUQiPa8ptCosrm8" target="_blank" rel="noopener">Open in Google Maps</a>
     </div>
   </div>
 </section>
