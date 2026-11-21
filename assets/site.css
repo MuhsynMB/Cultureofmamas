@@ -202,3 +202,5 @@ button.btn{font:inherit;font-weight:600;font-size:.82rem;cursor:pointer}
 /* tidy stand-in for cards that do not have a photo yet */
 .ph.art{border:0;border-radius:14px;padding:0;background:url(/images/logo-header.webp) center/auto 46% no-repeat,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44'%3E%3Cpath d='M22 2 42 22 22 42 2 22Z' fill='none' stroke='%23F4A300' stroke-opacity='.22' stroke-width='1.4'/%3E%3Cpath d='M22 15 29 22 22 29 15 22Z' fill='%23C8522F' fill-opacity='.28'/%3E%3C/svg%3E") center/44px repeat,radial-gradient(circle at 50% 50%,#6a2c16 0%,var(--brown) 70%)}
 .opt .ph.art{border-radius:0;border-bottom:2px solid var(--terra)}
+.photo-credit{font-size:.75rem;color:var(--muted);margin:1.4rem 0 0;max-width:none}
+.photo-credit a{color:inherit}
