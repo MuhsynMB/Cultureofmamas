@@ -122,7 +122,10 @@ ol.steps span{color:var(--muted);font-size:.95rem}
 footer{background:var(--bg)}
 footer .wrap{padding:2.2rem 0;text-align:center}
 .motto{font-weight:600;letter-spacing:.14em;font-size:.9rem}
-.tags{color:var(--muted);font-size:.85rem;margin-top:.6rem}
+.contact{list-style:none;padding:0;margin:1rem 0 0;display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem 1.8rem;font-size:.9rem}
+.contact a{display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;color:var(--text);font-weight:500}
+.contact a:hover{color:var(--link)}
+.contact svg{color:var(--link);flex:none}
 .credit{color:var(--muted);font-size:.78rem;letter-spacing:.04em;margin:1.4rem auto 0;padding-top:1.2rem;border-top:1px solid var(--line);max-width:none}
 .view{display:none}.view.on{display:block}
 .burger{width:46px;height:46px;border:2px solid var(--text);border-radius:3px;background:transparent;display:grid;place-content:center;gap:5px;cursor:pointer;padding:0}
